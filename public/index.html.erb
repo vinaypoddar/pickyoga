@@ -1,0 +1,393 @@
+<!--
+Author: R2s1 Production
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pick Yoga</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Yogahub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+
+
+<!--//end-smoth-scrolling-->
+</head>
+<body>
+	<!--banner-->
+	<div class="banner">
+		<!--header-->
+		<div class="headder">
+			<div class="container">				
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html"> <img src="images/logo.png" alt=""/> </a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li><a href="#about" class="scroll">About us</a></li>
+								<li><a href="#services" class="scroll">Services</a></li>
+								<li><a href="#testimonials" class="scroll">Testimonials</a></li>
+								<li><a href="#gallery" class="scroll">Gallery</a></li>
+								<li><a href="#"data-toggle="modal" data-target="#login-modal" class="scroll">Login</a></li>
+								<!--<li><%= link_to "Login", new_user_session_path %>Sign Up</a></li>-->
+								<li><%= link_to "Sign Up", new_user_registration_path %></li>
+							</ul>	
+						</div>	
+						<div class="clearfix"> </div>
+					</div>	
+				</nav>				
+			</div>	
+		</div>	
+		<!--//header-->
+		<!-- banner-text Slider starts Here -->
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			// You can also use "$(window).load(function() {"
+				$(function () {
+				// Slideshow 3
+					$("#slider3").responsiveSlides({
+					auto: true,
+					pager:true,
+					nav:false,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+					$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});	
+			});
+		</script>
+		<!--//End-slider-script -->
+		<div class="banner-title">
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>					
+							<h3>Make time for your Yoga </h3>
+							<p>"Yoga is the journery of the self,  through the self, to the self"</p>
+						</li>
+						<li>					
+							<h3>Understand & Yoga your self</h3>
+							<p>"Yoga is the journery of the self,  through the self, to the self"</p>
+						</li>
+						<li>					
+							<h3>Keep calm and do Yoga </h3>
+							<p>" Yoga is the journery of the self,  through the self, to the self "</p>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</div>
+	<!--//banner-->
+	<div class="about" id="about">
+		<div class="container">
+			<div class="about-grids">
+				<div class="col-md-6 about-info">
+					<img src="images/img1.jpg" alt=""/>
+				</div>
+				<div class="col-md-6 about-info">
+					<h3>About Yoga </h3>
+					<p>Yoga is not a ancient myth burried in oblivion.It is the valuable inheritance of the present.It is essential need of today and culture of tomorrow.</p>
+					<p>Unlike stretching or fitness, yoga is more than just physical postures. Patanjali’s eight-fold path illustrates how the physical practice is just one aspect of yoga. Even within the physical practice, yoga is unique because we connect the movement of the body and the fluctuations of the mind to the rhythm of our breath. Connecting the mind, body, and breath helps us to direct our attention inward. Through this process of inward attention, we learn to recognize our habitual thought patterns without labeling them, judging them, or trying to change them.</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--services-->
+	<div class="services" id="services">
+		<div class="container">
+			<div class="services-grids">
+				<div class="col-md-4 services-grids-info">
+					<h3>Our Services</h3>
+					<ul>
+						<li><a href="#">Donec ut quam lscele volutrisque.</a></li>
+						<li><a href="#">Etiam volutpatbh lo quam bortis</a></li>
+						<li><a href="#">Varius fusce vit quam aeblandit.</a></li>
+						<li><a href="#">onec dut quam lscel quam erisque.</a></li>
+						<li><a href="#">Tiame volut  quampatbh lobortis</a></li>
+						<li><a href="#">Ariusv fusce vita  quam eblandit.</a></li>
+						<li><a href="#">Varius fusce vitaeb lan quamdit.</a></li>
+						<li><a href="#">onec dut quam lsceler isque quam.</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 services-grids-info">
+					<img src="images/img2.jpg" alt=""/>
+					<h4><a href="#">Aenean pulvinar ac enim et posuere </a></h4>
+					<p>In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt velit sapien est, 
+						molestie sit amet metussit amet malesuada </p>						
+				</div>
+				<div class="col-md-4 services-grids-info">
+					<img src="images/img3.jpg" alt=""/>
+					<h4><a href="#">Aenean pulvinar ac enim et posuere</a></h4>
+					<p>In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt velit sapien est, 
+						molestie sit amet metussit amet malesuada  </p>
+				</div>				
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--//services-->
+	<!--testimonials-->
+	<div class="testimonials" id="testimonials">
+		<div class="container">			
+			<!-- banner-text Slider starts Here -->
+				<script src="js/responsiveslides.min.js"></script>
+				 <script>
+					// You can also use "$(window).load(function() {"
+						$(function () {
+						// Slideshow 4
+							$("#slider4").responsiveSlides({
+							auto: true,
+							pager:false,
+							nav:true,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							$('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+								$('.events').append("<li>after event fired.</li>");
+							}
+						});	
+					});
+				</script>
+			<!--//End-slider-script -->	
+			<div class="col-md-4 testimonial-left">
+				<h3>Testimonials</h3>
+			</div>
+			<div class="col-md-8 testimonial-right">
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider4">
+						<li>
+							<div class="testi-text">
+								<div class="testi-img">
+									<img src="images/img4.png" alt=""/>
+								</div>
+								<h4>MBARE DLEMID</h4>
+								<p>Duis vitae feugiat lorem. Mauris eget ipsum sapien. Praesent euismod nec risus id tempor In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt</p>								
+							</div>
+						</li>
+						<li>
+							<div class="testi-text">				
+								<div class="testi-img">
+									<img src="images/img5.png" alt=""/>
+								</div>
+								<h4>SINGEM MIDDLE</h4>
+								<p>Mauris vitae feugiat lorem.Duis eget ipsum sapien. Praesent euismod nec risus id tempor In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt</p>
+							</div>
+						</li>
+						<li>
+							<div class="testi-text">
+								<div class="testi-img">
+									<img src="images/img6.png" alt=""/>
+								</div>
+								<h4>MID ERASSING </h4>
+								<p>Vitae duis  feugiat lorem. Mauris eget ipsum sapien. Praesent euismod nec risus id tempor In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt</p>
+							</div>
+						</li>
+						<li>
+							<div class="testi-text">
+								<div class="testi-img">
+									<img src="images/img7.png" alt=""/>
+								</div>
+								<h4>RRASSBA MIDDLE</h4>
+								<p>Praesent vitae feugiat lorem. Mauris eget ipsum sapien.Duis euismod nec risus id tempor In sit amet sapien eros. Integer in tincidunt velit. Ut in tincidunt</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>				
+			<div class="clearfix"> </div>	
+		</div>
+	</div>
+	<!--//testimonials-->
+	<!--gallery-->
+	<div class="gallery" id="gallery">
+		<div class="container">
+			<h3>Gallery</h3>
+			<div class="gallery-bottom">
+				<ul id="og-grid" class="og-grid">
+					<li>
+						<a href="single.html" data-largesrc="images/img8.jpg" data-title="Mauris accumsan" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img8.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" data-largesrc="images/img9.jpg" data-title="Vivamus mauris" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img9.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" data-largesrc="images/img10.jpg" data-title="Aliquam fringilla"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img10.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" data-largesrc="images/img11.jpg" data-title="Nam lacinia"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img11.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" data-largesrc="images/img12.jpg" data-title="Integer laoreet"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img12.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" data-largesrc="images/img13.jpg" data-title="Quisque feugiat"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img13.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" data-largesrc="images/img14.jpg" data-title="Aliquam eget"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img14.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="single.html" data-largesrc="images/img15.jpg" data-title="Nullam ligula" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
+							<img class="img-responsive" src="images/img15.jpg" alt="img01"/>
+						</a>
+					</li>
+					 <div class="clearfix"> </div>
+				</ul>
+			</div>
+			<!--end-gallery js-->
+			<script src="js/grid.js"></script>
+				<script>
+					$(function() {
+						Grid.init();
+					});
+				</script>
+			<!--//end-gallery-->
+		</div>	
+	</div>
+	<!--gallery-->
+	<!--contact-->
+	<div class="contact" id="contact">
+		<div class="container">
+			<h3>How to find us</h3>
+			<div class="contact-grids">
+				<div class="col-md-7 contact-left">				
+					<form>
+						<input type="text" value="Name" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Name';}" required="">
+						<input type="email" value="Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Email';}" required="">
+						<input type="text" value="Telephone" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Telephone';}" required="">
+						<textarea type="text"  onfocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+						<input type="submit" value="Submit" >
+					</form>
+				</div>
+				<div class="col-md-5 contact-right">
+					<p class="cnt-p"></p>
+					<p>48 SANTA ANA DRIVE</p>
+					<p>DANNEMORA, AUCKLAND</p>
+					<p>Telephone : +02 102 210 241</p>
+				<!--	<p>FAX : +1 000 0000 0000</p> -->
+					<p>Email : <a href="mailto:example@mail.com">pickyoga@gmail.com</a></p>
+				</div>							
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--contact-->
+	<div class="footer">
+		<div class="container">
+			<p>© 2017 Pick Yoga. All rights reserved.<span class="bhagwa"></span></p>
+		</div>
+	</div>
+	
+	<!--sign popup -->
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				 <!-- <form>-->
+					<!--<input type="text" name="user" placeholder="Username">-->
+					<!--<input type="password" name="pass" placeholder="Password">-->
+					<!--<input type="submit" name="login" class="login loginmodal-submit" value="Login">-->
+				 <!-- </form>-->
+				  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+					  <div class="field">
+					    <%= f.email_field :email, autofocus: true, , placeholder: "email" %>
+					  </div>
+					
+					  <div class="field">
+					    <%= f.password_field :password, autocomplete: "off", placeholder: "password" %>
+					  </div>
+					
+					  <% if devise_mapping.rememberable? -%>
+					    <div class="field">
+					      <%= f.check_box :remember_me %>
+					      <%= f.label :remember_me %>
+					    </div>
+					  <% end -%>
+					
+					  <div class="actions">
+					    <%= f.submit "Login" %>
+					  </div>
+					<% end %>
+				  <div class="login-help">
+					<!--<a href="#">Register</a> - <a href="#">Forgot Password</a>-->
+					<%= render "users/shared/links" %>
+				  </div>
+				</div>
+			</div>
+		  </div>
+	
+	<!--//contact-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"> </script>
+</body>
+</html>

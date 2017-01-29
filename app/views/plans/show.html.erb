@@ -1,0 +1,13 @@
+<div class="plan">
+  <div id="plan_image_<%=@plan.id%>" class="mercury-region" data-type="editable"><%=raw @plan.image %></div>
+  <div>
+    <span id="plan_title_<%=@plan.id%>"  class="mercury-region" data-type="editable"><%=raw @plan.title %></span>
+  </div>
+  <div id="plan_description_<%=@plan.id%>" class="mercury-region" data-type="editable"><%=raw @plan.description %></div>
+  <div id="plan_long_description_<%=@plan.id%>" class="mercury-region" data-type="editable"><%=raw @plan.long_description %></div>
+  <div id="plan_price_<%=@plan.id%>" class="mercury-region" data-type="editable"><%=raw @plan.price %></div>
+  <% if current_user.try(:admin?) %>
+    <div><%= link_to 'Edit', "/editor" + request.path, id: "edit_plan", data: {save_url: mercury_update_plan_path(@plan)} %></div>
+    <div><%= link_to 'Destroy', @plan, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  <% end %>
+</div>

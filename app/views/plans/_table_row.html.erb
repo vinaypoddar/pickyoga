@@ -1,0 +1,41 @@
+<div class="about" id="about">
+		<div class="container">
+			<div class="about-grids">
+				<div class="col-md-6 about-info">
+					<div id="plan_image_<%=plan.id%>">
+						<%=raw plan.image %>
+					</div>
+				</div>
+				<div class="col-md-6 about-info">
+					<h3><span id="plan_title_<%=plan.id%>"><%=raw plan.title %></span></h3>
+					<p id="plan_description_<%=plan.id%>"><%=raw plan.description %></p>
+				</div>
+				<div class="row">
+  				<div class="col-md-12 about-info">
+  					<p id="plan_long_description_<%=plan.id%>"><%=raw plan.long_description %></p>
+  				</div>
+  			</div>
+  			<%= form_for @order_item, remote: true do |f| %>
+  			<h4 id="plan_price_<%=plan.id%>" class="text-right">Unit Price: <span style="color: green"><%=raw number_to_currency(plan.price, unit: 'NZD $') %></span></h4>
+  				<div class="input-group">
+  					<%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+  					<div class="input-group-btn">
+  						<%= f.hidden_field :plan_id, value: plan.id %>
+  						<%= f.submit "Add to Cart", class: "btn btn-primary" %>
+  					</div>
+  				</div>
+  			<% end %>
+				<% if current_user.try(:admin?) %>
+  				<div class="row">
+  				  <div class="col-md-1 about-info">
+  					  <%= link_to 'Edit', "/editor" + request.path + '/' + plan.id.to_s , id: "edit_plan", data: {save_url: mercury_update_plan_path(plan)}, class: "btn btn-info" %>
+  				  </div>
+            <divclass="col-md-1 about-info">
+              <%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-info" %>
+            </div>
+          </div>
+        <% end %>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>

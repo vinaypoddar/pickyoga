@@ -1,0 +1,157 @@
+<div class="forgotbg myaccount">
+
+<div>
+	<div class="loginmodal-container m-100" style="max-width: 994px;">
+		<center>
+		    <a href="/"><div class="logo-center"><img src="/images/logo.png"></div></a>
+		</center>
+	    
+	    <div>
+	        <div class="form" style="display:inline-block; float:left; margin-right: 10%;">
+				<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, placeholder: "Your Name" %>
+  </div>
+  
+  <div class="field">
+    <%= f.text_field :email, autofocus: true, placeholder: "Your Email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirmation Password" %>
+  </div>
+
+  <div class="field">
+    <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current Password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update", class: "login loginmodal-submit" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "login loginmodal-submit" %></p>
+
+<%= link_to "Back", :back %>
+</div>
+
+<div class="form" style="display:inline-block;">
+				<!--<h2> Order Details <%= resource %> </h2>-->
+				<h2> Order History </h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Order Number</th>
+                <th>Plans</th>
+                <th>Status</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%  resource.orders.complete.each do |order| %>
+              <tr data-toggle="" data-target="#order_<%=order.id%>" class="clickable" style="cursor: pointer;">
+                  <td><%= order.updated_at.strftime("%d-%m-%Y") %></td>
+                  <td><%= order.order_number %></td>
+                  <td><%= order.order_items.size %></td>
+                  <td><%= order.status %></td>
+                  <td><%= number_to_currency order.amount, unit: 'NZD $' %></td>
+              </tr>
+              <tr id="order_<%=order.id%>" class="collapse out">
+                <td colspan="5" class="well">
+                  <table class="table table-striped table-condensed">
+                    <thead>
+                      <tr>
+                        <td>Plan</td>
+                        <td>Unit Price</td>
+                        <td>Quantity</td>
+                        <td>Total Price</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% order.order_items.each do |item|%>
+                        <tr>
+                          <td><%= strip_tags item.plan.title %></td>
+                          <td><%= number_to_currency item.unit_price, unit: 'NZD $' %></td>
+                          <td><%= item.quantity %></td>
+                          <td><%= number_to_currency item.total_price, unit: 'NZD $' %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+	
+	</div>
+		<!--header-->
+			
+		<!--//header-->
+		
+	<div class="footer bg-fill">
+		<div class="container">
+			<p>© 2017 Pick Yoga. All rights reserved.<span class="bhagwa"></span></p>
+		</div>
+	</div>
+	<!--//contact-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		
+		<!--code to toggle detailed area of table row-->
+		<script type"text/javascript">
+		  $(".clickable").click(function() {
+		    $sel = $(this).next(".collapse")
+        if($sel.hasClass("out")) {
+            $sel.addClass("in");
+            $sel.removeClass("out");
+        } else {
+            $sel.addClass("out");
+            $sel.removeClass("in");
+        }
+      });
+		</script>
+		<!-- end of code to toggle detailed area of table row-->
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/bootstrap.js"> </script>

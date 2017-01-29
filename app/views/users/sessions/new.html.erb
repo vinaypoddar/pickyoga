@@ -1,0 +1,63 @@
+<div class="forgotbg">
+
+<div>
+	<div class="loginmodal-container m-100">
+				<a href="/"><div class="logo-center"><img src="/images/logo.png"></div></a>
+					
+					<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <%= f.text_field :email, autofocus: true, placeholder: "Your Email" %>
+            </div>
+          
+            <div class="field">
+              <%= f.password_field :password, autocomplete: "off", placeholder: "Enter your Password" %>
+            </div>
+          
+            <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end -%>
+          
+            <div class="actions">
+              <%= f.submit "Login", class: "login loginmodal-submit" %>
+            </div>
+          <% end %>
+
+          <%= render "users/shared/links" %>
+	</div>
+	
+	</div>
+		<!--header-->
+			
+		<!--//header-->
+		
+	<div class="footer bg-fill">
+		<div class="container">
+			<p>© 2017 Pick Yoga. All rights reserved.<span class="bhagwa"></span></p>
+		</div>
+	</div>
+	<!--//contact-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/bootstrap.js"> </script>
+

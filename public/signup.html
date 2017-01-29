@@ -1,0 +1,86 @@
+<!--
+Author: RK production
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Yogahub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smoth-scrolling-->
+</head>
+<body class="forgotbg">
+	<!--banner-->
+	<div>
+	<div class="loginmodal-container m-100">
+				<a href="index.html"><div class="logo-center"><img src="images/logo.png"></div></a>
+					
+				  <form>
+					<input type="text" name="Email" placeholder="Enter your Name">
+					<input type="text" name="Email" placeholder="Your Email">					
+					<input type="text" name="Email" placeholder="Enter your Username">
+					<input type="text" name="Email" placeholder="Enter your Password">
+					<input type="text" name="Email" placeholder="Confirm your Password">
+					<input type="submit" name="Reset Password" class="login loginmodal-submit" value="Register">
+				  </form>
+									  
+	</div>
+	
+	</div>
+		<!--header-->
+			
+		<!--//header-->
+		
+	<div class="footer bg-fill">
+		<div class="container">
+			<p>© 2017 Pick Yoga. All rights reserved.<span class="bhagwa"></span></p>
+		</div>
+	</div>
+	<!--//contact-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"> </script>
+</body>
+</html>

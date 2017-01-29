@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <a href="devise/registrations#new">SignUp</a>
+        <a href="devise/sessions#new">Login</a>
+    </body>
+</html>
