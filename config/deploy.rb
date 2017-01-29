@@ -15,7 +15,7 @@ set :repo_url, "git@github.com:vinaypoddar1/pickyoga.git"
 set :deploy_to, "/var/www/html/pickyoga.com"
 
 # Setting the user for deployment
-set :user, "root"
+set :user, "vinay"
 # Setting the user for deployment
 # TODO -- setup the server with RSA keys that allow my dev machine
 # to access without the need for entering a password every time
@@ -64,3 +64,24 @@ set :pty, true
 
 # Default value for keep_releases is 5
 set :keep_releases, 3
+
+namespace :deploy do
+    desc "Human readable description of task"
+    task :name_of_task_command do
+        # do stuff
+    end
+    
+    desc "Symlink shared config files"
+    task :symlink_config_files do
+        run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+    end
+    
+    desc "Restart Passenger app"
+    task :restart do
+        run "#{ try_sudo } touch #{ File.join(current_path, 'tmp', 'restart.txt') }"
+    end
+end
+
+after "deploy", "deploy:symlink_config_files"
+after "deploy", "deploy:restart"
+after "deploy", "deploy:cleanup"
