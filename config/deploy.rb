@@ -15,7 +15,7 @@ set :repo_url, "git@github.com:vinaypoddar1/pickyoga.git"
 set :deploy_to, "/var/www/html/pickyoga.com"
 
 # Setting the user for deployment
-set :user, "vinay"
+set :user, "root"
 # Setting the user for deployment
 # TODO -- setup the server with RSA keys that allow my dev machine
 # to access without the need for entering a password every time
@@ -81,6 +81,14 @@ namespace :deploy do
         run "#{ try_sudo } touch #{ File.join(current_path, 'tmp', 'restart.txt') }"
     end
 end
+
+namespace :customs do 
+    task :symlink_db_yml do
+        run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+    end
+end
+
+before 'bundle:install', 'customs:symlink_db_yml'
 
 after "deploy", "deploy:symlink_config_files"
 after "deploy", "deploy:restart"
