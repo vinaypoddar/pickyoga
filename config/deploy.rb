@@ -73,18 +73,24 @@ namespace :deploy do
     
     desc "Symlink shared config files"
     task :symlink_config_files do
-        execute :ln, "-s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+        on roles(:web) do
+            execute :ln, "-s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+        end
     end
     
     desc "Restart Passenger app"
     task :restart do
-        execute :touch, "#{ File.join(current_path, 'tmp', 'restart.txt') }"
+        on roles(:web) do
+            execute :touch, "#{ File.join(current_path, 'tmp', 'restart.txt') }"
+        end
     end
 end
 
 namespace :customs do 
     task :symlink_db_yml do
-        execute "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+        on roles(:web) do
+            execute "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+        end
     end
 end
 
