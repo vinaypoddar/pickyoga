@@ -88,8 +88,8 @@ namespace :customs do
     end
 end
 
-before 'bundle:install', 'customs:symlink_db_yml'
+# before 'bundle:install', 'customs:symlink_db_yml'
 
-after "deploy", "deploy:symlink_config_files"
+before "deploy", "deploy:symlink_config_files"
 after "deploy", "deploy:restart"
 after "deploy", "deploy:cleanup"
